@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GitHubs Favoritos" />
+    <link rel="shortcut icon" href="./src/assets/star2.svg" type="image/svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer type="module" src="./src/js/main.js"></script>
+    <title>GitFav</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./src/assets/logo.svg" alt="" />
+        <div class="search">
+          <label for="search" class="sr-only"
+            >Digite o Github username que quer favoritar</label
+          >
+          <input
+            id="search"
+            type="text"
+            placeholder="Digite o Github username que quer favoritar"
+          />
+          <button id="onAddUser">
+            <i class="ph ph-star"></i>
+            Favoritar
+          </button>
+        </div>
+      </header>
+      <main>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Repositories</th>
+              <th>Followers</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="user">
+                <img
+                  src="https://github.com/diego3g.png"
+                  width="56px"
+                  height="56px"
+                  alt=""
+                />
+                <a href="" target="_blank">
+                  <p class="name">Diego Fernandes</p>
+                  <span class="login">/diego3g</span>
+                </a>
+              </td>
+              <td class="repositories">123</td>
+              <td class="followers">123</td>
+              <td class="action">
+                <button class="remove">Remover</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="user">
+                <img
+                  src="https://github.com/diego3g.png"
+                  width="56px"
+                  height="56px"
+                  alt=""
+                />
+                <a href="">
+                  <p class="name">Diego Fernandes</p>
+                  <span class="login">/diego3g</span>
+                </a>
+              </td>
+              <td class="repositories">123</td>
+              <td class="followers">123</td>
+              <td class="action">
+                <button class="remove">Remover</button>
+              </td>
+            </tr>
+
+            <tr id="notFavorite" style="display: none">
+              <td>
+                <img
+                  src="./src/assets/star2.svg"
+                  alt="vetor estrela assutada"
+                />
+                <h2>Nenhum favorito ainda</h2>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+    <div id="error">
+      <span>Novo Erro encontrado </span>
+    </div>
+  </body>
+</html>

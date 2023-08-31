@@ -1,0 +1,222 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variaveis Css */
+:root {
+  font-size: 62.5%; /*16 para 1.0rem*/
+  --text-primary: #e1e1e6;
+  --bg-color: #000;
+  --primary-color: #092d38;
+  --secondary-color: rgba(6, 22, 27, 0.5);
+  --button-color: #065e7c;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-color);
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  margin: 11.5rem auto;
+  max-width: 112rem;
+  padding: 0 2rem;
+}
+/* Header */
+#app header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.search input {
+  width: 46rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  background-color: #06191c;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+}
+
+.search button {
+  padding: 1.2rem 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--button-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.search button i {
+  font-size: 2.4rem;
+}
+
+.search button:hover {
+  background: #fff;
+  color: var(--button-color);
+}
+
+/*Table*/
+main {
+  margin-top: 8.7rem;
+  border: 0.1rem solid #4a808c;
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+.notFavorite td {
+  height: 53.5rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  background: hsla(192, 65%, 7%, 1);
+}
+.notFavorite td img {
+  height: 13.2rem;
+  width: 12.5rem;
+}
+.notFavorite td h2 {
+  color: #4e5455;
+  font-size: 4rem;
+  font-weight: 700;
+}
+#app table {
+  width: 100%;
+  color: var(--text-primary);
+  border-collapse: collapse;
+}
+
+#app table thead {
+  background-color: var(--primary-color);
+  text-align: left;
+}
+#app table tbody {
+  display: block;
+  max-height: 53.5rem;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#app table tbody::-webkit-scrollbar {
+  width: 0.6rem;
+  background: var(--primary-color);
+}
+
+#app table tbody::-webkit-scrollbar-thumb {
+  height: 12.2rem;
+  border-radius: 1rem;
+  background: #4a808c;
+}
+#app table tbody::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#app table thead,
+#app table tbody tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#app table th,
+#app table tbody td {
+  padding: 1.6rem 0 1.6rem 4rem;
+  text-align: left;
+}
+#app table tbody tr:nth-child(even) {
+  background-color: #06181c;
+  border-top: 0.1rem solid #4a808c;
+  border-bottom: 0.1rem solid #4a808c;
+}
+#app table tbody tr:last-child {
+  border-bottom: none;
+}
+
+#app table tbody .user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+#app table tbody .user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+
+#app table tbody .user a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-primary);
+  gap: 0.8rem;
+}
+#app table tbody .user a p {
+  font-weight: bold;
+  font-size: 2rem;
+}
+#app table tbody .repositories,
+#app table tbody .followers {
+  font-weight: bold;
+}
+#app table tbody .remove {
+  background: none;
+  border: none;
+  color: #f75a68;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#error {
+  display: none;
+  background: #f75a68;
+  width: 300px;
+  padding: 16px 10px;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  border-radius: 2px;
+  font-size: 2rem;
+  color: var(--text-primary);
+  animation: Error 1s normal;
+}
+
+@keyframes Error {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 5px;
+  }
+}
